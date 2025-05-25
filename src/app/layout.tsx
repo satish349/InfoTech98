@@ -1,4 +1,4 @@
-// app/template.tsx
+// app/layout
 
 import type { Metadata } from "next";
 import {GeistSans} from "geist/font";
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${GeistSans.variable} ${GeistSans.variable} antialiased bg-gray-900`}>
         <ClientProviders>
-          {children}
+          <template>{children}</template>
           <Toaster/>
         </ClientProviders>
       </body>
