@@ -127,7 +127,7 @@ const handler = NextAuth({
         }
 
         return {
-          id: user.id,
+          id: String(user.id),
           email: user.email,
           name: user.username ?? "",
           username: user.username ?? "", // Ensure username is always a string
